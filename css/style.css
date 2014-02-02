@@ -39,10 +39,18 @@ div.oldposts {
   margin-top: 30px;
 }
 
-div.contact {
-  font-size: 10pt;
-  color: #888888;
+div.footer {
   border-style: solid;
   border-width: 1px 0px 0px 0px;
   border-color: #aaaaaa;
+}
+
+div.footer .contact {
+  font-size: 10pt;
+  color: #888888;
+  float: left;
+}
+
+div.footer .rss {
+  float: right;
 }
