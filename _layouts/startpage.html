@@ -1,0 +1,26 @@
+{% include header.html %}
+
+{% assign posts_shown = 10 %}
+
+{% for post in site.posts limit:posts_shown do %}
+<div class="post">
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <div class="date">{{ post.date | date:"%d %B %Y" }}</div>
+  <div class="content">
+    {{ post.content }}
+  </div>
+</div>
+{% endfor %}
+
+<div class="oldposts">
+  <h2>Older Posts</h2>
+  <ul>
+    {% for oldpost in site.posts offset:posts_shown do %}
+    <li>
+      {{ oldpost.date }} <a href="{{ oldpost.url }}">{{ oldpost.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% include footer.html %}
