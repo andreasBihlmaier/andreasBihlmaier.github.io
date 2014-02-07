@@ -24,7 +24,7 @@ Yet, in case you do not like the existing ones and you suppose to benefit from a
 
 To continue, let\'s assume the object is modelled.
 We\'ll use the union of a box and a cylinder (just click \"Create box\" and \"Create cylinder\" in the \"Part\" workbench, select both and click \"Make a union\" to get the example shape).
-<a class="fancybox" rel="group" href="/images/freecad_cylinder_box.jpg"><img src="/images/medium/freecad_cylinder_box.jpg" alt="" /></a>
+[![Cylinder fused with box](/images/medium/freecad_cylinder_box.jpg)](/images/large/freecad_cylinder_box.jpg)
 This means there is a geometrically _exact_ representation of the object we want to use in Gazebo.
 Unfortunately, most real-time graphics engines do not work with CSG, therefore we have to approximate the actual geometry by a triangle mesh.
 We can achieve this using the \"Mesh design\" workbench\'s \"Create mesh from shape\" function:

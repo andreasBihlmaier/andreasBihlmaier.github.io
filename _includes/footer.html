@@ -10,7 +10,18 @@
   </div>
   <script type="text/javascript">
     $(document).ready(function() {
-      $(".fancybox").fancybox();
+        $(".fancybox").fancybox(
+          {
+          closeClick : true
+          }
+        );
+    });
+    function endsWith(str, suffix) {
+          return str.indexOf(suffix, str.length - suffix.length) !== -1;
+    }
+    $("a").each(function(index) {
+        if (endsWith($(this).attr("href"), ".jpg") || endsWith($(this).attr("href"), ".png"))
+          $(this).addClass("fancybox");
     });
   </script>
 </body>
