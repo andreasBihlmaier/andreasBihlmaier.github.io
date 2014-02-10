@@ -27,16 +27,31 @@ We\'ll use the union of a box and a cylinder (just click \"Create box\" and \"Cr
 ![Cylinder fused with box](/images/medium/freecad_cylinder_box.jpg)
 This means there is a geometrically _exact_ representation of the object we want to use in Gazebo.
 Unfortunately, most real-time graphics engines do not work with CSG, therefore we have to approximate the actual geometry by a triangle mesh.
-We can achieve this using the \"Mesh design\" workbench\'s \"Create mesh from shape\" function:
-
 
 
 Mesh export
 -----------
+We can achieve this using the \"Mesh design\" workbench\'s \"Create mesh from shape\" function (Settings: TODO):
+![Mesh from shape](/images/medium/freecad_mesh_from_shape.jpg)
+This works well, but once we load the object into Gazebo, we recognize that the cylinder part is does not look very round.
+One solution would be to increase the number of triangles, i.e. decrease the \"surface deviation\" parameter.
+Unfortunately, this goes along with a (big) performance degradation.
+If we only care that the objects looks to be round (in contrast to its geometry actually being rounder), we can use Gazebo's support for vertex normals and Phong shading.
+
+This [FreeCAD macro](TODO) (copy to `~/.FreeCAD/`) exports FreeCAD parts together with their vertex normals as Wavefront .obj file.
+It works by querying the parametric part representation for the actual normal at each vertex position.
+This is completely different and superior to using a \"smooth\" feature (e.g. in Blender \"Transform\" -> \"Shading: Smooth\") on the mesh after export.
+Note: The script is not implemented very efficiently at the moment, thus the export may take a while depending on the final mesh size.
+![Macro to export mesh with normals](/images/medium/freecad_mesh_from_shape.jpg)
 
 
 Mesh format conversion
 ----------------------
+Gazebo supports .stl and Collada. dae files, whereas the former does not at all support vertex normals.
+Our exported .obj mesh can be converted to a .dae file _preserving the vertex normals_ using this [Python script](TODO):  
+`zsh
+./obj2dae.py -u cm cylinderbox.obj cylinderbox.dae
+`
 
 
 Mesh simplification
