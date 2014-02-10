@@ -17,12 +17,18 @@
           }
         );
     });
+    function startsWith(str, suffix) {
+          return str.indexOf(suffix) !== -1;
+    }
     function endsWith(str, suffix) {
           return str.indexOf(suffix, str.length - suffix.length) !== -1;
     }
-    $("a").each(function(index) {
-        if (endsWith($(this).attr("href"), ".jpg") || endsWith($(this).attr("href"), ".png"))
-          $(this).addClass("fancybox");
+    $("img").each(function(index) {
+        var imgURL = $(this).attr("src");
+        if (startsWith(imgURL, "/images/small/") || startsWith(imgURL, "/images/medium/")) {
+            var largeImgURL = imgURL.replace("small/", "large/").replace("medium/", "large/");
+            $(this).wrap("<a class=\"fancybox\" href=\"" + largeImgURL + "\"></a>");
+        }
     });
   </script>
 </body>
