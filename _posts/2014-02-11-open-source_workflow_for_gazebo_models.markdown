@@ -71,7 +71,10 @@ Although we avoided excessively detailed mesh geometries by substituting vertex 
 I want to point two paths towards simplified meshes, i.e. having less triangles, to be used as [SDF](http://gazebosim.org/sdf/dev.html) `<collision>` property.
 The first is to allow higher deviations through FreeCAD\'s tessellation settings.
 
-The second one is to simplify our visual mesh through Blender\'s [\"Decimate\"](http://wiki.blender.org/index.php/Doc:2.6/Manual/Modifiers/Generate/Decimate) modifier.
-![Blender decimate modifier](/images/medium/blender_decimate_modifier.jpg)
+The second path is to simplify our visual mesh.
+Blender has a [\"Decimate\"](http://wiki.blender.org/index.php/Doc:2.6/Manual/Modifiers/Generate/Decimate) modifier.
+And [MeshLab](http://meshlab.sourceforge.net/) offers several mesh simplification techniques.
+Below is an example using the \"Quadric Edge Collapse Decimation\", reducing the mesh faces to 1/2 of the original:
+![MeshLab simplify](/images/medium/meshlab_simplify.jpg)
 
 Now that we have our models, enjoy simulating.
