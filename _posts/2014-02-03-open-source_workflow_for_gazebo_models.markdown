@@ -31,28 +31,45 @@ Unfortunately, most real-time graphics engines do not work with CSG, therefore w
 
 Mesh export
 -----------
-We can achieve this using the \"Mesh design\" workbench\'s \"Create mesh from shape\" function (Settings: TODO):
+We can achieve this using the \"Mesh design\" workbench\'s \"Create mesh from shape\" function (Tessellation settings: \"Standard\", Surface deviation=1.0):
 ![Mesh from shape](/images/medium/freecad_mesh_from_shape.jpg)
-This works well, but once we load the object into Gazebo, we recognize that the cylinder part is does not look very round.
+This works well, but once we load the object into Gazebo, we recognize that the cylinder part does not look very round.
+![Gazebo mesh from shape](/images/medium/gazebo_mesh_from_shape-cutout.jpg)
 One solution would be to increase the number of triangles, i.e. decrease the \"surface deviation\" parameter.
-Unfortunately, this goes along with a (big) performance degradation.
-If we only care that the objects looks to be round (in contrast to its geometry actually being rounder), we can use Gazebo's support for vertex normals and Phong shading.
+Unfortunately, this goes along with a (big) rendering performance degradation.
+If we only care that the objects looks to be round (in contrast to its geometry actually being rounder), we can use Gazebo\'s support for vertex normals and Phong shading.
 
 This [FreeCAD macro](TODO) (copy to `~/.FreeCAD/`) exports FreeCAD parts together with their vertex normals as Wavefront .obj file.
 It works by querying the parametric part representation for the actual normal at each vertex position.
 This is completely different and superior to using a \"smooth\" feature (e.g. in Blender \"Transform\" -> \"Shading: Smooth\") on the mesh after export.
 Note: The script is not implemented very efficiently at the moment, thus the export may take a while depending on the final mesh size.
-![Macro to export mesh with normals](/images/medium/freecad_mesh_from_shape.jpg)
+![Macro to export mesh with normals](/images/medium/freecad_mesh_with_normals.jpg)
 
 
 Mesh format conversion
 ----------------------
 Gazebo supports .stl and Collada. dae files, whereas the former does not at all support vertex normals.
 Our exported .obj mesh can be converted to a .dae file _preserving the vertex normals_ using this [Python script](TODO):  
-`zsh
-./obj2dae.py -u cm cylinderbox.obj cylinderbox.dae
-`
+`./obj2dae.py -u cm cylinderbox.obj cylinderbox.dae`
+
+The resulting mesh is rendered much smoother in Gazebo:
+![Gazebo mesh with normals](/images/medium/gazebo_mesh_with_normals-cutout.jpg)
+
+
+
+Mesh materials
+--------------
+This post is about creating geometrically and visually accurate Gazebo models.
+We have achieved geometrical accuracy through using a parametric CAD program.
+Visual accuracy in relation to geometry is also given by exporting the actual vertex normals.
+What is missing are proper material definitions and textures for each part of the mesh - this will be covered in a future post.
 
 
 Mesh simplification
 -------------------
+Although we avoided excessively detailed mesh geometries by substituting vertex normals for more triangles, the meshes are most likely too detailed as collision bodies.
+I want to point two paths towards simplified meshes, i.e. having less triangles, to be used as [SDF](http://gazebosim.org/sdf/dev.html) `<collision>` property.
+The first is to allow higher deviations through FreeCAD\'s tessellation settings.
+
+The second one is to simplify our visual mesh through Blender\'s [\"Decimate\"](http://wiki.blender.org/index.php/Doc:2.6/Manual/Modifiers/Generate/Decimate) modifier.
+![Blender decimate modifier](/images/medium/blender_decimate_modifier.jpg)
