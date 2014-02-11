@@ -73,3 +73,5 @@ The first is to allow higher deviations through FreeCAD\'s tessellation settings
 
 The second one is to simplify our visual mesh through Blender\'s [\"Decimate\"](http://wiki.blender.org/index.php/Doc:2.6/Manual/Modifiers/Generate/Decimate) modifier.
 ![Blender decimate modifier](/images/medium/blender_decimate_modifier.jpg)
+
+Now that we have our models, enjoy simulating.
