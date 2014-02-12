@@ -9,6 +9,9 @@
   <div class="content">
     {{ post.content }}
   </div>
+  {% if post.comments %}
+    <a href="{{ post.url }}#comment">Comment</a>
+  {% endif %}
 </div>
 {% endfor %}
 
