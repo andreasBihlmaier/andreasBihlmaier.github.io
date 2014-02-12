@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: Open-Source Workflow to Create Geometrically and Visually Accurate Gazebo Models
 ---
 
@@ -20,7 +21,7 @@ We use [FreeCAD](http://freecadweb.org/) as CAD program.
 It is open-source, based on a parametric CAD kernel ([OpenCASCADE](http://www.opencascade.org/)), supports many import/export formats and has a good [Python API](http://freecadweb.org/api/).
 I\'m not going into the process of modelling with FreeCAD here.
 There are many tutorials out there.
-Yet, in case you do not like the existing ones and you suppose to benefit from another one here, just [drop me a note](mailto:andreas.bihlmaier@gmx.de).
+Yet, in case you do not like the existing ones and you suppose to benefit from another one here, just [drop me a note](mailto:andreas.bihlmaier@gmx.de) or add a comment below.
 
 To continue, let\'s assume the object is modelled.
 We\'ll use the union of a box and a cylinder (just click \"Create box\" and \"Create cylinder\" in the \"Part\" workbench, select both and click \"Make a union\" to get the example shape).
