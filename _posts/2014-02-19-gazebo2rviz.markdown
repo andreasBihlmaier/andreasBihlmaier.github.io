@@ -30,3 +30,5 @@ From now everything that happens in gazebo, e.g. moving, adding or deleting a mo
 
 The package is work in progress, i.e. not free of bugs, and there some desired features are still missing, e.g. support for non-mesh `<visual>` SDF elements.
 If you find gazebo2rviz usefull and fix bugs or add features that you require, please send be a pull request.
+
+__Update:__ gazebo2rviz now also contains the _sdf2marker_ node that publishes a SDF model to rviz, independently of gazebo.
