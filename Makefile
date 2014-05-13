@@ -26,3 +26,8 @@ images/medium/%.png: images/%.png
 	convert $< -resize $(IMAGE_MEDIUM_SIZE) $@
 images/large/%.png: images/%.png
 	convert $< -resize $(IMAGE_LARGE_SIZE) $@
+
+
+.PHONY: run
+run:
+	bundle exec jekyll serve --watch
