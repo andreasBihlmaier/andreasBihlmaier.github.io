@@ -4,3 +4,4 @@ url: http://andreasBihlmaier.github.io
 timezone: Europe/Berlin
 encoding: UTF-8
 pygments: true
+markdown: kramdown
