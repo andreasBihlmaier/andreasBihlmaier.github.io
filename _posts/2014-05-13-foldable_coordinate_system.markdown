@@ -1,7 +1,7 @@
 ---
 layout: default
 comments: true
-title: Foldable Coordinate System: Print, Cut, Fold, Glue and Profit
+title: 'Foldable Coordinate System: Print, Cut, Fold, Glue and Profit'
 ---
 
 Sometimes it is much easier to augment reality with real items instead of virtual augmentation.
