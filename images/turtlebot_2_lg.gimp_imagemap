@@ -1,0 +1,11 @@
+<img src="Untitled" width="269" height="358" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:ahb -->
+<area shape="poly" coords="91,94,167,100,167,104,144,110,146,121,196,124,203,118,206,110,182,103,250,108,249,75,123,68,91,68,91,93" target="kinect" href="#" />
+<area shape="poly" coords="16,240,17,292,33,308,60,320,91,326,124,329,156,329,194,325,226,315,249,297,253,287,254,242,233,224,54,215,28,228,16,240" target="turtlebot_base" href="#" />
+</map>
