@@ -11,8 +11,10 @@ Getting to the point of this post: I wanted to have all simulated entities autom
 
 [gazebo2rviz](https://github.com/andreasBihlmaier/gazebo2rviz) contains the ROS nodes I came up with to achieve the above set goal.
 The package contains two (Python) nodes:
+
 * _gazebo2tf_ translates /gazebo/link_states to TF in a hierarchical manner corresponding to SDF `<include>`.
 * _gazebo2marker_ retrieves the current gazebo models from /gazebo/model_states, parses their corresponding SDF file and sends visualization_msgs/Marker for each mesh messages to /visualization_marker used by the rviz Marker plugin.
+
 With this solution no plugin for either gazebo or rviz is required, only already available interfaces are used.
 
 Here is a small usage example:  

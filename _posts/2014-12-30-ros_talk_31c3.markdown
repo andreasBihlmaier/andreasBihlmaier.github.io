@@ -1,0 +1,22 @@
+---
+layout: default
+comments: true
+title: '31C3 talk: How I Learned to Stop Reinventing and Love the Wheels or having FUN with (home/hackerspace) robotics'
+---
+
+I gave a talk on the first day of the 31st Chaos Communication Congress (31C3):
+\"An introduction to the Robot Operating System (ROS) for the home/hackerspace roboticist (if it physically interacts with the world through code, call it robot).\"
+
+The goal was to give a hands-on ROS introduction for everyone, who doesn\'t have access to expensive equipment, i.e. in a home or hackerspace setting.
+In my own experience the hard part of working with ROS is to understand how everything comes together and different elements fall into place when they are used in the manner intended by the community.
+Therefore, rather than to present the components in a rigorous way and systematically going into the details, the idea was to show the big picture through specific subsystems, which can be easily reproduced by everyone.
+The [full description](http://events.ccc.de/congress/2014/Fahrplan/events/6077.html) provides some more details about covered topics.
+
+If you are interested you can watch the [offical recording](http://media.ccc.de/browse/congress/2014/31c3_-_6077_-_en_-_saal_6_-_201412271600_-_how_i_learned_to_stop_reinventing_and_love_the_wheels_-_andreas_bihlmaier.html) of the talk and download [the slides](http://events.ccc.de/congress/2014/Fahrplan/system/attachments/2497/original/How_I_Learned_to_Stop_Reinventing_and_Love_the_Wheels-bihlmaier-expanded.pdf).
+
+As is written on the last slide: I\'m very interested to hear about (non-academic) projects utilizing ROS for their robotic **application**.
+If you did one of these or know about one, please let me know so I can link them here.
+
+Projects:
+
+* [aMoSeRo](http://defendtheplanet.net/category/myrobots/amosero-myrobots/)
