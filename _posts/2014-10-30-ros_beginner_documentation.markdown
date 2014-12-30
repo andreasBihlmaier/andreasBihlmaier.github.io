@@ -15,4 +15,4 @@ The HTML and javascript is embedded from [here](/html/2014-10-30-ros_beginner_do
 
 <iframe width="940" height="500" src="/html/2014-10-30-ros_beginner_documentation.html" frameborder="0"></iframe>
 
-**Update**: I created a (hopefully XSS-safe) Plugin for MoinMoin-based Wikis (such as [wiki.ros.org](http://wiki.ros.org/)) you can find [on github](https://gist.github.com/andreasBihlmaier/dfd74ca31a948cb0404d).
+**Update**: I created a (hopefully XSS-safe) Plugin for MoinMoin-based Wikis (such as [wiki.ros.org](http://wiki.ros.org/)) you can find [on github](https://github.com/andreasBihlmaier/moinmoin_interactive_image_map/blob/master/InteractiveImageMap.py).
