@@ -30,6 +30,11 @@ div.top {
   max-width: 480px;
 }
 
+div.top a {
+  text-decoration: none;
+  color: black;
+}
+
 div.post {
   border-radius: 15px;
   border-style: solid;
@@ -40,6 +45,17 @@ div.post {
 div.post .date {
   font-size: 10pt;
   margin: 0px;
+  float: left;
+}
+div.post .author {
+  font-size: 10pt;
+  margin: 0px;
+  margin-left: 5px;
+  color: #888888;
+  float: left;
+}
+div.post .author a {
+  text-decoration: none;
 }
 
 div.post .content {
