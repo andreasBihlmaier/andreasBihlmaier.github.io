@@ -20,3 +20,4 @@ If you did one of these or know about one, please let me know so I can link them
 Projects:
 
 * [aMoSeRo](http://defendtheplanet.net/category/myrobots/amosero-myrobots/)
+* [MyzharBot](http://myzharbot.robot-home.it/blog/)
