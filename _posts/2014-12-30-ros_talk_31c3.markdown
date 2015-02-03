@@ -21,3 +21,5 @@ Projects:
 
 * [aMoSeRo](http://defendtheplanet.net/category/myrobots/amosero-myrobots/)
 * [MyzharBot](http://myzharbot.robot-home.it/blog/)
+* [MockBot](https://github.com/mockbot/MockBot)
+* 
